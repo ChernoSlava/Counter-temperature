@@ -1,0 +1,23 @@
+.Counter {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: rgb(72, 133, 218);
+    text-align: center;
+    padding-top: 80px;
+    font-size: 30px;
+    color: white;
+}
+
+.Counter_zero {
+    background-color: rgb(144, 141, 126);
+}
+
+.Counter_lesszero {
+    background-color: rgb(72, 133, 218);
+}
+
+.Counter_abovezero {
+     background-color: rgb(214, 63, 36);
+}

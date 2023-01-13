@@ -1,0 +1,23 @@
+.Btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+    border: 1px solid white;
+}
+
+.Btn_plus {
+    background-color: #868e8e;
+}
+.Btn_plus:focus {
+    background-color: rgb(136, 29, 29);
+}
+
+.Btn_minus {
+    background-color: #868e8e;
+}
+.Btn_minus:focus {
+    background-color: rgb(19, 28, 192);
+}
