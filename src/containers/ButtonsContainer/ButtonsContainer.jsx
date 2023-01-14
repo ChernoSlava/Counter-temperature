@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Button } from "@components"
-import { CounterContext } from "../../contexts";
-import { actionType } from "@constants";
+import { CounterContext } from "@contexts";
+import { actionType, buttonsTitle, buttonsType } from "@constants";
 
 export const ButtonsContainer = () => {
     const {dispatch} = useContext(CounterContext);
@@ -9,12 +9,12 @@ export const ButtonsContainer = () => {
     return (
         <>
             <Button 
-                title="+" 
-                type='plus' 
+                title={buttonsTitle.titlePlus}
+                type={buttonsType.typePlus}
                 onClick={() => dispatch({ type: actionType.plus })}/>
             <Button 
-                title="-" 
-                type='minus' 
+                title={buttonsTitle.titleMinus} 
+                type={buttonsType.typeMinus}
                 onClick={() => dispatch({ type: actionType.minus })}/>
         </>
     )

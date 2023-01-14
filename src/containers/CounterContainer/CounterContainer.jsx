@@ -1,21 +1,23 @@
 import React, { useContext } from "react";
 import { Counter } from "@components";
-import { CounterContext } from '../../contexts';
+import { CounterContext } from '@contexts';
+
+import { typeCss } from '@constants';
 
 export const CounterContainer = () => {
     const {state} = useContext(CounterContext);
     let counter = state.counterValue;
     
-    let type = 'zero';
+    let type = typeCss.typeZero;
     
     if ( counter < 0 && counter > - 10) {
-        type = 'lesszero';
+        type = typeCss.typeLessZero;
     } else if ( counter > 0 && counter < 10 ) {
-        type = 'abovezero';
+        type = typeCss.typeAboveZero;
     } else if (counter >= 10 ) {
-        type = 'aboveten'
+        type = typeCss.typeAboveTen;
     } else if (counter <= -10 ) {
-        type = 'lessten'
+        type = typeCss.typeLessTen;
     }
 
     return (

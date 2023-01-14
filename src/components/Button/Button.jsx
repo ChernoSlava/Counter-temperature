@@ -1,9 +1,9 @@
 import React from "react";
 import styles from './Button.css';
-
+import { buttonsType } from "@constants";
 const typeCss = {
-    'plus': styles.Btn_plus,
-    'minus': styles.Btn_minus
+    [buttonsType.typePlus]: styles.Btn_plus,
+    [buttonsType.typeMinus]: styles.Btn_minus
 }
 
 export const Button = ({ title, type, ...props }) => {
