@@ -4,16 +4,21 @@ import { CounterContext } from '../../contexts';
 
 export const CounterContainer = () => {
     const {state} = useContext(CounterContext);
-
-    let type = 'lesszero';
-
-    if ( state.counterValue === 0 ) {
-        type = 'zero';
-    } else if ( state.counterValue > 0 ) {
+    let counter = state.counterValue;
+    
+    let type = 'zero';
+    
+    if ( counter < 0 && counter > - 10) {
+        type = 'lesszero';
+    } else if ( counter > 0 && counter < 10 ) {
         type = 'abovezero';
+    } else if (counter >= 10 ) {
+        type = 'aboveten'
+    } else if (counter <= -10 ) {
+        type = 'lessten'
     }
 
     return (
-        <Counter title={state.counterValue} type={type}/>
+        <Counter title={counter} type={type}/>
     )
 }
