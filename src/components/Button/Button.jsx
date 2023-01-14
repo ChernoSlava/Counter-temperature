@@ -6,8 +6,8 @@ const typeCss = {
     'minus': styles.Btn_minus
 }
 
-export const Button = ({ title, type }) => {
+export const Button = ({ title, type, ...props }) => {
     return(
-        <button className={`${styles.Btn} ${typeCss[type] || styles.Btn_plus}`}>{title}</button>
+        <button className={`${styles.Btn} ${typeCss[type] || styles.Btn_plus}`} {...props}>{title}</button>
     );
 }

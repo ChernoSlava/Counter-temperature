@@ -7,10 +7,23 @@
     gap: 10px;
 }
 
+.App__container {
+    width: 250px;
+    height: 330px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #32556e;
+
+}
+
 .App__buttons {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    width: 200px;
+    height: 80px;
+    gap: 40px;
+    padding-top: 15px;
+    justify-content: center;    
 }

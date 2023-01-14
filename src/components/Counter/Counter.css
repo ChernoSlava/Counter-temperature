@@ -11,13 +11,26 @@
 }
 
 .Counter_zero {
-    background-color: rgb(144, 141, 126);
+    background-color: #696867;
+    transition: linear 0.9s;
 }
 
 .Counter_lesszero {
-    background-color: rgb(72, 133, 218);
+    background-color: rgb(98, 138, 196);
+    transition: linear 0.9s;
+}
+
+.Counter_lessten {
+    background-color: rgb(0, 69, 166);
+    transition: linear 0.9s;
 }
 
 .Counter_abovezero {
-     background-color: rgb(214, 63, 36);
+     background-color: rgb(215, 104, 84);
+     transition: linear 0.9s;
+}
+
+.Counter_aboveten {
+     background-color: rgb(252, 38, 0);
+     transition: linear 0.9s;
 }

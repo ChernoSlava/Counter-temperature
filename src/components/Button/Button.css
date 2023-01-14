@@ -9,15 +9,18 @@
 }
 
 .Btn_plus {
-    background-color: #868e8e;
+    background-color: #696867
+
 }
-.Btn_plus:focus {
+.Btn_plus:hover {
     background-color: rgb(136, 29, 29);
+    transition: .7s;
 }
 
 .Btn_minus {
-    background-color: #868e8e;
+    background-color: #696867
 }
-.Btn_minus:focus {
+.Btn_minus:hover {
     background-color: rgb(19, 28, 192);
+    transition: .7s;
 }
