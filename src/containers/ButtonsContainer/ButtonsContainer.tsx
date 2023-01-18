@@ -5,6 +5,7 @@ import { CounterContext } from "@contexts";
 
 import { buttonsTitle } from "@constants";
 import { ActionKind } from "@types";
+
 export const ButtonsContainer: React.FC = (): JSX.Element => {
     const { dispatch } = useContext(CounterContext);
 
