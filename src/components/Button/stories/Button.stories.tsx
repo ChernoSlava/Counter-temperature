@@ -1,13 +1,15 @@
 import React from "react";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { Button } from "..";
 
 export default {
-    title: 'Example/Button',
+    title: "Example/Button",
     component: Button,
-    atgTypes: { onClick: { action: 'clicked' }},
-}
+    argTypes: { onClick: { action: 'clicked' } },
+} as ComponentMeta<typeof Button>;
 
-const Template = args => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 export const Playground = Template.bind({});
 
@@ -18,7 +20,7 @@ Playground.args = {
 
 Playground.argTypes = {
     type: {
-        control: { type: 'select', options: ['Plus', 'Minus']}
+        control: { type: 'select', options: ['plus', 'minus']}
     }
 }
 

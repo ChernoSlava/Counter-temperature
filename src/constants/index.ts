@@ -2,5 +2,5 @@ export {
     actionType, 
     buttonsTitle, 
     buttonsType, 
-    typeCss, 
+    typeCss,
 } from './constants';
