@@ -14,11 +14,12 @@
 ### Counter-temperature
 
 - React js,
-- React Context,
 - useReducer,
 - Webpack,
 - StoryBook 6.3, 
-- TypeScript;
+- TypeScript,
+- Styled Components,
+- Redux;
 
 ---
 ## Установка и запуск

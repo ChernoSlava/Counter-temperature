@@ -1,4 +1,1 @@
-export { 
-    actionType, 
-    buttonsTitle, 
-} from './constants';
+export { buttonsTitle } from './constants';

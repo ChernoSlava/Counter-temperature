@@ -1,8 +1,7 @@
-// import { actionType } from '@constants';
 import { CounterStateType, Action, ActionKind } from '@types';
 
 export const CounterReducer = (
-        state: CounterStateType, 
+        state: CounterStateType = InitialCounter, 
         action: Action
     ): CounterStateType => {
     
