@@ -2,8 +2,6 @@ import React, { useContext } from "react";
 import { Counter, CounterType } from "@components";
 import { CounterContext } from '@contexts';
 
-// import { typeCss } from '@types';
-
 export const CounterContainer: React.FC  = (): JSX.Element => {
     const {state} = useContext(CounterContext);
 

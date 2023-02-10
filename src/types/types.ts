@@ -15,20 +15,6 @@ export enum ActionKind {
     Minus = "MINUS", 
 }
 
-export enum buttonsType {
-    Plus = "plus",
-    Minus = "minus", 
-}
-
-export enum typeCss {
-    zero = 'zero',
-    lessZero = 'lesszero',
-    aboveZero = 'abovezero',
-    lessTen = 'lessten',
-    aboveTen = 'aboveten',
-
-}
-
 export type Action = {
     type: ActionKind
 }

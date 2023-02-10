@@ -11,14 +11,16 @@ export const ButtonsContainer: React.FC = (): JSX.Element => {
 
     return (
         <>
-            <Button 
-                title={buttonsTitle.titlePlus}
-                type='plus'
-                onClick={() => dispatch({ type: ActionKind.Plus })}/>
-            <Button 
-                title={buttonsTitle.titleMinus} 
-                type='minus'
-                onClick={() => dispatch({ type: ActionKind.Minus })}/>
+          <Button 
+            title={buttonsTitle.titleMinus} 
+            type='minus'
+            onClick={() => dispatch({ type: ActionKind.Minus })}
+          />
+          <Button 
+            title={buttonsTitle.titlePlus}
+            type='plus'
+            onClick={() => dispatch({ type: ActionKind.Plus })}
+          />
         </>
     )
 }
