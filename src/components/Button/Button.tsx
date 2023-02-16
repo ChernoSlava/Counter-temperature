@@ -1,5 +1,5 @@
-import React from "react";
-import { ButtonStyled, ButtonType } from "./styled";
+import React from 'react';
+import { ButtonStyled, ButtonType } from './styled';
 
 export const Button: React.FC<{
   title: string;
@@ -11,4 +11,4 @@ export const Button: React.FC<{
       {title}
     </ButtonStyled>
   );
-}
+};

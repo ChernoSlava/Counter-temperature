@@ -1,9 +1,9 @@
-import { Action, ActionKind } from "@types";
+import { Action, ActionKind } from '@types';
 
 export const MinusAction = (): Action => ({
-  type: ActionKind.Minus
-})
+  type: ActionKind.Minus,
+});
 
 export const PlusAction = (): Action => ({
-  type: ActionKind.Plus
-})
+  type: ActionKind.Plus,
+});

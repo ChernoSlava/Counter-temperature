@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AppStyled = styled.div`
   height: 100vh;
@@ -20,11 +20,11 @@ export const AppContainer = styled.div`
   background-color: #32556e;
 `;
 
-export const AppButtonsContainer= styled.div`
+export const AppButtonsContainer = styled.div`
   display: flex;
   width: 200px;
   height: 80px;
   gap: 40px;
   padding-top: 15px;
-  justify-content: center;   
+  justify-content: center;
 `;
