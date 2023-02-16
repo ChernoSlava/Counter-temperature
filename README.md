@@ -19,7 +19,8 @@
 - StoryBook 6.3, 
 - TypeScript,
 - Styled Components,
-- Redux;
+- ESLint,
+- Redux/toolkit;
 
 ---
 ## Установка и запуск
