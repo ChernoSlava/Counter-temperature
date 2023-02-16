@@ -1,30 +1,26 @@
 import React, { useReducer } from "react";
+import { Provider } from "react-redux";
 
-import { CounterContext } from '@contexts';
-import { CounterReducer, InitialCounter } from './store';
 import { CounterContainer, ButtonsContainer } from "@containers";
+import { store } from "@store";
 
-import styles from './App.css';
-
+import { GlobalStyles } from './styles/GlobalStyles';
+import { AppStyled, AppContainer, AppButtonsContainer } from './styled';
 
 export const App = () => {
-    const [ state, dispatch ] = useReducer(CounterReducer, InitialCounter);
-
     return(
-        <CounterContext.Provider value={{
-            state: {
-                counterValue: state.value
-            },
-            dispatch
-        }}>
-            <div className={styles.App}>
-                <div className={styles.App__container}>
+      <>  
+        <GlobalStyles />
+        <Provider store={store}>
+            <AppStyled>
+                <AppContainer>
                     <CounterContainer />
-                    <div className={styles.App__buttons}>
+                    <AppButtonsContainer>
                         <ButtonsContainer />
-                    </div>
-                </div>
-            </div>
-        </CounterContext.Provider>
+                    </AppButtonsContainer>
+                </AppContainer>
+            </AppStyled>
+        </Provider>
+      </>
     )
 };

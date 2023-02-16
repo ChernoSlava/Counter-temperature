@@ -1,24 +1,25 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
 
 import { Button } from "@components"
-import { CounterContext } from "@contexts";
-
 import { buttonsTitle } from "@constants";
-import { ActionKind } from "@types";
+import { MinusAction, PlusAction } from '@store';
 
 export const ButtonsContainer: React.FC = (): JSX.Element => {
-    const { dispatch } = useContext(CounterContext);
+  const dispatch = useDispatch();
 
-    return (
-        <>
-            <Button 
-                title={buttonsTitle.titlePlus}
-                type='plus'
-                onClick={() => dispatch({ type: ActionKind.Plus })}/>
-            <Button 
-                title={buttonsTitle.titleMinus} 
-                type='minus'
-                onClick={() => dispatch({ type: ActionKind.Minus })}/>
-        </>
-    )
+  return (
+    <>
+      <Button 
+        title={buttonsTitle.titleMinus} 
+        type='minus'
+        onClick={() => dispatch(MinusAction())}
+      />
+      <Button 
+        title={buttonsTitle.titlePlus}
+        type='plus'
+        onClick={() => dispatch(PlusAction())}
+      />
+    </>
+  )
 }

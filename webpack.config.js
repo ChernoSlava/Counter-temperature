@@ -1,6 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const createStyledComponentsTransformer =
+    require('typescript-plugin-styled-components').default;
+
+const styledComponentsTransformer = createStyledComponentsTransformer({
+    ssr: false,
+    displayName: true,
+    componentIdPrefix: 'counter',
+});
+
 module.exports = {
     mode: 'development',
     devtool: 'cheap-module-source-map',
@@ -8,31 +17,33 @@ module.exports = {
     module: {
         rules: [{ 
             test: /\.(js|ts|jsx|tsx)$/, 
-            use: { loader: 'ts-loader' }, 
+            use: { 
+              loader: 'ts-loader',
+              options: {
+                getCustomTransformers: () => ({
+                  before: [styledComponentsTransformer],
+                }),
+              }, 
+            }, 
             exclude: /node_modules/ 
-        },
-        {
-            test: /\.css$/,
-            use: [
-                "style-loader",
-                {
-                    loader: "css-loader",
-                    options: {
-                        modules: {
-                            localIdentName: "[name]__[local]__[hash:base64:5]"
-                        },
-                    }
-                }
-                
-            ]
-        }
-    ]
+        }]
     },
     output: { 
         path: path.resolve(__dirname, './build'),
         filename: 'bundle.js',
         clean: true
     },
+    // optimization: {
+    //   splitChunks: {
+    //       cacheGroups: {
+    //           vendor: {
+    //               test: /[\\/]node_modules[\\/]/,
+    //               name: 'vendors',
+    //               chunks: 'all'
+    //           }
+    //       }
+    //   }
+    // },
     resolve: {
         extensions: [ '.js', '.jsx', '.ts', '.tsx' ],
         modules: [
@@ -41,7 +52,6 @@ module.exports = {
         ],
         alias: {
             '@components': [path.resolve(__dirname,'./src/components')],
-            '@contexts': [path.resolve(__dirname,'./src/contexts')],
             '@containers': [path.resolve(__dirname,'./src/containers')],
             '@constants': [path.resolve(__dirname,'./src/constants')],
             '@types': [path.resolve(__dirname,'./src/types/types')],

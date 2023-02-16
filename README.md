@@ -14,11 +14,12 @@
 ### Counter-temperature
 
 - React js,
-- React Context,
 - useReducer,
 - Webpack,
 - StoryBook 6.3, 
-- TypeScript;
+- TypeScript,
+- Styled Components,
+- Redux;
 
 ---
 ## Установка и запуск
@@ -51,8 +52,7 @@
 1) [Статичный сайт Путешествие по России.](https://chernoslava.github.io/russian-travel/)
 2) [Репозиторий проекта Место на чистом js.](https://github.com/ChernoSlava/Mesto)
 3) [Репозиторий полноценного доработанного проекта Место Frontend и Backend.](https://github.com/ChernoSlava/react-mesto-api-full)
-4) Дипломный проект Movies explorer - в работе.
-
+4) [Дипломный проект Movies explorer](https://github.com/ChernoSlava/movies-explorer-frontend)
 ### Проекты созданные при обучении и менторстве senior web developer Абретова А.
 
 1) [Counter](https://github.com/ChernoSlava/counter)
@@ -60,4 +60,5 @@
 3) [ToDo list](https://github.com/ChernoSlava/ToDo)
 4) [Contacts keeper](https://github.com/ChernoSlava/contacts-keeper)
 4) [Fish gallery](https://github.com/ChernoSlava/fish-gallery)
+5) [Рефакторинг дипломного проекта Movies explorer](https://github.com/ChernoSlava/Movies-exlorer-refactor)
 ---

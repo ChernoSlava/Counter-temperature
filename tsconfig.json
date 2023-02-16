@@ -8,7 +8,6 @@
         "baseUrl": "./src",
         "paths": {
             "@containers": ["containers"],
-            "@contexts": ["contexts"],
             "@components": ["components"],
             "@constants": ["constants"],
             "@types": ["types/types"],
