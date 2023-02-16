@@ -4,7 +4,7 @@ import { CounterReducer } from "./CounterReducer";
 
 const composeEnhancers = typeof window === 'object' && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
     (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-        name: 'REACT_COUNTER-TEMPERATURE',
+        name: 'REACT_COUNTER_TEMPERATURE',
         trace: true,
         traceLimit: 25
     }) :
