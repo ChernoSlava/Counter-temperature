@@ -1,8 +1,8 @@
-import React from "react";
-import { useDispatch } from "react-redux";
+import React from 'react';
+import { useDispatch } from 'react-redux';
 
-import { Button } from "@components"
-import { buttonsTitle } from "@constants";
+import { Button } from '@components';
+import { buttonsTitle } from '@constants';
 import { MinusAction, PlusAction } from '@store';
 
 export const ButtonsContainer: React.FC = (): JSX.Element => {
@@ -10,16 +10,16 @@ export const ButtonsContainer: React.FC = (): JSX.Element => {
 
   return (
     <>
-      <Button 
-        title={buttonsTitle.titleMinus} 
-        type='minus'
+      <Button
+        title={buttonsTitle.titleMinus}
+        type="minus"
         onClick={() => dispatch(MinusAction())}
       />
-      <Button 
+      <Button
         title={buttonsTitle.titlePlus}
-        type='plus'
+        type="plus"
         onClick={() => dispatch(PlusAction())}
       />
     </>
-  )
-}
+  );
+};

@@ -1,4 +1,4 @@
 export const buttonsTitle = {
-    titlePlus: "+",
-    titleMinus: "-",
+  titlePlus: '+',
+  titleMinus: '-',
 };
