@@ -1,27 +1,28 @@
 import { CounterType } from '@components';
 import { CounterStateType } from '@types';
+import { createSelector } from '@reduxjs/toolkit';
 
-export const getCounterContainerPropsSelector = (
-  state: CounterStateType,
-): {
-  value: number;
-  type: string;
-} => {
-  const counter = state.value;
-  let type: CounterType = 'zero';
+const getState = (state: CounterStateType) => state;
 
-  if (counter < 0 && counter > -10) {
-    type = 'lesszero';
-  } else if (counter > 0 && counter < 10) {
-    type = 'abovezero';
-  } else if (counter >= 10) {
-    type = 'aboveten';
-  } else if (counter <= -10) {
-    type = 'lessten';
-  }
+export const getCounterContainerPropsSelector = createSelector(
+  [getState],
+  state => {
+    const counter = state.value;
+    let type: CounterType = 'zero';
 
-  return {
-    value: counter,
-    type,
-  };
-};
+    if (counter < 0 && counter > -10) {
+      type = 'lesszero';
+    } else if (counter > 0 && counter < 10) {
+      type = 'abovezero';
+    } else if (counter >= 10) {
+      type = 'aboveten';
+    } else if (counter <= -10) {
+      type = 'lessten';
+    }
+
+    return {
+      value: counter,
+      type,
+    };
+  },
+);

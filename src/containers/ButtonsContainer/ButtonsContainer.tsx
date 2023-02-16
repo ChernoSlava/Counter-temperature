@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import { Button } from '@components';
 import { buttonsTitle } from '@constants';
-import { MinusAction, PlusAction } from '@store';
+import { minus, plus } from '@store';
 
 export const ButtonsContainer: React.FC = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -13,12 +13,12 @@ export const ButtonsContainer: React.FC = (): JSX.Element => {
       <Button
         title={buttonsTitle.titleMinus}
         type="minus"
-        onClick={() => dispatch(MinusAction())}
+        onClick={() => dispatch(minus())}
       />
       <Button
         title={buttonsTitle.titlePlus}
         type="plus"
-        onClick={() => dispatch(PlusAction())}
+        onClick={() => dispatch(plus())}
       />
     </>
   );
