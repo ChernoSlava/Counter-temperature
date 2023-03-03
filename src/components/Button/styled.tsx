@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ThemeType } from '@theme';
 
 export type ButtonType = 'plus' | 'minus';
 
@@ -10,26 +11,26 @@ export const ButtonStyled = styled.button<{
   border-radius: 50%;
   cursor: pointer;
   font-size: 40px;
-  color: white;
+  color: ${props => (props.theme as ThemeType).colors.white};
   border: 1px solid white;
 
   ${props =>
     props.renderType === 'plus' &&
     `
-        background-color: #696867;
+        background-color: ${(props.theme as ThemeType).colors.grey10};
 
         &:hover {
-          background-color: rgb(136, 29, 29);
+          background-color: ${(props.theme as ThemeType).colors.red10};
           transition: .7s;
         }
     `}
   ${props =>
     props.renderType === 'minus' &&
     `
-        background-color: #696867;
+        background-color: ${(props.theme as ThemeType).colors.grey10};
 
         &:hover {
-          background-color: rgb(19, 28, 192);
+          background-color: ${(props.theme as ThemeType).colors.blue10};
           transition: .7s;
         }
     `}
