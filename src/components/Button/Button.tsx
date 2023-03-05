@@ -1,13 +1,19 @@
 import React from 'react';
 import { ButtonStyled, ButtonType } from './styled';
 
-export const Button: React.FC<{
-  title: string;
+export type ButtonProps = {
+  title?: string;
   type: ButtonType;
-  onClick: () => void;
-}> = ({ title, type, ...props }): JSX.Element => {
+  onClick?: () => void;
+};
+
+export const Button: React.FC<ButtonProps> = ({
+  title,
+  type,
+  onClick,
+}): JSX.Element => {
   return (
-    <ButtonStyled renderType={type} {...props}>
+    <ButtonStyled renderType={type} onClick={onClick}>
       {title}
     </ButtonStyled>
   );
