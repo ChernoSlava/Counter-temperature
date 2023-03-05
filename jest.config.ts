@@ -30,7 +30,7 @@ export default {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ['/node_modules/', 'index.ts', 'src/types', "GlobalStyles.tsx", "store.ts", "App.tsx", "src/styled.tsx", "theme.ts" ],
+  coveragePathIgnorePatterns: ['/node_modules/', 'index.ts', 'src/types', "GlobalStyles.tsx", "store.ts", "App.tsx", "src/styled.tsx", "theme.ts"],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
@@ -83,7 +83,12 @@ export default {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    "@theme": "<rootDir>/src/theme",
+    "@store": "<rootDir>/src/store",
+    "@components": "<rootDir>/src/components",
+    "@constants": "<rootDir>/src/constants",
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
