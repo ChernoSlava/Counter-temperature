@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button tests should render correct minus button 1`] = `
+.c0 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 40px;
+  color: white;
+  border: 1px solid white;
+  background-color: #696867;
+}
+
+.c0:hover {
+  background-color: rgb(19,28,192);
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    I am button
+  </button>
+</div>
+`;
+
+exports[`Button tests should render correct plus button 1`] = `
+.c0 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 40px;
+  color: white;
+  border: 1px solid white;
+  background-color: #696867;
+}
+
+.c0:hover {
+  background-color: rgb(136,29,29);
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    I am button
+  </button>
+</div>
+`;

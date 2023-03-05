@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ThemeType } from '@theme';
 
 export type CounterType =
   | 'zero'
@@ -14,40 +15,40 @@ export const CounterStyled = styled.div<{
   height: 200px;
   border-radius: 50%;
   border: 1px solid white;
-  background-color: rgb(72, 133, 218);
+  background-color: ${props => (props.theme as ThemeType).colors.blue20};
   text-align: center;
   padding-top: 80px;
   font-size: 30px;
-  color: white;
+  color: ${props => (props.theme as ThemeType).colors.white};
 
   ${props =>
     props.type === 'zero' &&
     `
-        background-color: #696867;
+        background-color: ${(props.theme as ThemeType).colors.grey10};
         transition: linear 0.9s;
     `}
   ${props =>
     props.type === 'lesszero' &&
     `
-        background-color: rgb(98, 138, 196);
+        background-color: ${(props.theme as ThemeType).colors.blue30};
         transition: linear 0.9s;
     `}
     ${props =>
     props.type === 'lessten' &&
     `
-        background-color: rgb(0, 69, 166);
+        background-color: ${(props.theme as ThemeType).colors.blue40};
         transition: linear 0.9s;
     `}
     ${props =>
     props.type === 'abovezero' &&
     `
-        background-color: rgb(215, 104, 84);
+        background-color: ${(props.theme as ThemeType).colors.red30};
         transition: linear 0.9s;
     `}
     ${props =>
     props.type === 'aboveten' &&
     `
-        background-color: rgb(252, 38, 0);
+        background-color: ${(props.theme as ThemeType).colors.red20};
         transition: linear 0.9s;
     `}
 `;
